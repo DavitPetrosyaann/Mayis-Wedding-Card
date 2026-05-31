@@ -1,7 +1,7 @@
 import Countdown from "react-countdown";
 import styles from "./Count.module.scss";
 
-const targetDate = new Date("2026-06-20T18:00:00");
+const targetDate = new Date("2026-06-20T17:30:00");
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {

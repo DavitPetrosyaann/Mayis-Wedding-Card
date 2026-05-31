@@ -8,9 +8,9 @@ export const eventDetails = {
   couple: "Մայիս և Գոհար",
   location: "Աղաբաբյանս ռեստորան",
   address: "Nazarbekyan 25/5",
-  date: new Date("2026-06-20T18:00:00+04:00"),
+  date: new Date("2026-06-20T17:30:00+04:00"),
   coverDate: "20.06.2026",
-  heroDateLabel: "2026 թ. հունիսի 20, շաբաթ · 18:00",
+  heroDateLabel: "2026 թ. հունիսի 20, շաբաթ · 17:30",
   calendar: {
     month: "Հունիս",
     year: 2026,
@@ -23,7 +23,7 @@ export const eventDetails = {
       [28, 29, 30, "", "", "", ""],
     ],
   },
-  calendarNote: "Շաբաթ, ժամը 18:00",
+  calendarNote: "Շաբաթ, ժամը 17:30",
   mapUrl:
     "https://www.google.com/maps/search/?api=1&query=Nazarbekyan%2025%2F5",
   audioSrc: musicFile,
