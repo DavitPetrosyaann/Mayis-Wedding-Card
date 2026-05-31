@@ -4,7 +4,6 @@ import Cover from "./components/Cover.jsx";
 import Footer from "./components/Footer.jsx";
 import Hero from "./components/Hero.jsx";
 import Location from "./components/Location.jsx";
-import RSVP from "./components/RSVP.jsx";
 import Story from "./components/Story.jsx";
 import Count from "./components/Count.jsx";
 import Calendar from "./components/Calendar.jsx";
@@ -69,7 +68,6 @@ function App() {
             <Count />
             <Calendar />
             <Location />
-            <RSVP />
             <Footer />
           </main>
         </>
