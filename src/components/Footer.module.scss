@@ -1,0 +1,25 @@
+.footer {
+  padding: 2.4rem 1.15rem max(2.6rem, env(safe-area-inset-bottom));
+  color: var(--muted);
+  background: linear-gradient(180deg, #fffdf8, #f2eadf);
+  text-align: center;
+}
+
+.names {
+  margin: 0 0 0.35rem;
+  color: var(--ink);
+  font-family: var(--script);
+  font-size: clamp(2.65rem, 11vw, 4.1rem);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.footer p:not(.names) {
+  margin: 0;
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+}

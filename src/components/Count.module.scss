@@ -1,0 +1,84 @@
+$pearl-white: #faf9f6;
+
+.countSection {
+  padding: 2.5rem 1.15rem;
+  background: linear-gradient(
+    180deg,
+    rgba(250, 249, 246, 0.98),
+    rgba(247, 243, 236, 0.94)
+  );
+  border-radius: 1.5rem;
+  width: min(100%, 42rem);
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0 0 1rem;
+  text-align: center;
+  color: var(--ink);
+  font-size: clamp(1.4rem, 4vw, 1.85rem);
+  font-weight: 700;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(5rem, 1fr));
+  gap: 1rem;
+}
+
+.unit {
+  min-height: 5rem;
+  background: $pearl-white;
+  border-radius: 1.15rem;
+  padding: 1rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1.1rem 2rem rgba(84, 75, 66, 0.08);
+}
+
+.value {
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.label {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.complete {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .countSection {
+    padding: 1.75rem 1rem;
+  }
+
+  .countdown {
+    grid-template-columns: repeat(2, minmax(5rem, 1fr));
+    gap: 0.75rem;
+  }
+
+  .unit {
+    padding: 0.9rem 0.75rem;
+  }
+
+  .value {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .label {
+    font-size: 0.75rem;
+  }
+}

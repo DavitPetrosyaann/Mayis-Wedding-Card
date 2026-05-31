@@ -1,0 +1,102 @@
+$pearl-white: #faf9f6;
+
+.calendar {
+  padding: 2.5rem 1.15rem;
+  background: linear-gradient(
+    180deg,
+    rgba(250, 249, 246, 0.98),
+    rgba(247, 243, 236, 0.94)
+  );
+  border-radius: 1.5rem;
+  width: min(100%, 42rem);
+  margin: 0 auto;
+  box-shadow: 0 1.2rem 2.4rem rgba(84, 75, 66, 0.08);
+}
+
+.header {
+  display: grid;
+  gap: 0.35rem;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.monthLabel {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.weekday {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.day {
+  min-height: 4.5rem;
+  border-radius: 1rem;
+  background: $pearl-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 0.8rem 1.6rem rgba(83, 68, 52, 0.08);
+}
+
+.highlight {
+  background: #fff5f5;
+  color: #9f2d2d;
+  border: 1px solid rgba(191, 63, 63, 0.22);
+}
+
+.highlightContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1rem;
+}
+
+.highlightContent i {
+  color: #c11b1b;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 640px) {
+  .calendar {
+    padding: 1.75rem 1rem;
+  }
+
+  .grid {
+    gap: 0.45rem;
+  }
+
+  .day {
+    min-height: 3.8rem;
+    font-size: 0.95rem;
+  }
+
+  .highlightContent {
+    gap: 0.45rem;
+  }
+}

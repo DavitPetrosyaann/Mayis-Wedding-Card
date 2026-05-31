@@ -1,0 +1,34 @@
+.location {
+  padding: 1.15rem;
+  border: 1px solid rgba(95, 83, 72, 0.13);
+  border-radius: 0.5rem;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.84), rgba(232, 228, 225, 0.46)),
+    var(--shell);
+  text-align: center;
+
+  h3 {
+    margin: 0;
+    font-size: 1.12rem;
+  }
+
+  p {
+    margin: 0.4rem 0 1.1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  a {
+    display: inline-grid;
+    place-items: center;
+    width: 100%;
+    min-height: 3.35rem;
+    border-radius: 999px;
+    color: #fff;
+    background: linear-gradient(145deg, #5d554d, #302b27);
+    box-shadow: 0 1rem 1.8rem rgba(47, 42, 38, 0.17);
+    font-weight: 700;
+    text-decoration: none;
+  }
+}

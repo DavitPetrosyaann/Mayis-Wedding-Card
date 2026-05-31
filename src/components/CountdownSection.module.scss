@@ -1,0 +1,38 @@
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.unit {
+  display: grid;
+  align-content: center;
+  min-height: 5.6rem;
+  padding: 0.65rem 0.2rem;
+  border: 1px solid rgba(95, 83, 72, 0.12);
+  border-radius: 0.5rem;
+  background:
+    radial-gradient(circle at 35% 20%, rgba(255, 255, 255, 0.9), transparent 4rem),
+    rgba(255, 253, 248, 0.74);
+  box-shadow: 0 0.8rem 1.8rem rgba(88, 77, 67, 0.08);
+  text-align: center;
+
+  strong {
+    font-size: clamp(1.55rem, 8vw, 2.4rem);
+    line-height: 1;
+  }
+
+  span {
+    margin-top: 0.35rem;
+    color: var(--muted);
+    font-size: 0.68rem;
+    font-weight: 700;
+  }
+}
+
+.complete {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+.app {
+  min-height: 100svh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 18% 4%, rgba(255, 255, 255, 0.95), transparent 22rem),
+    linear-gradient(145deg, #fbfaf7 0%, #f4efe7 54%, #e7ded2 100%);
+}
+
+.main {
+  width: min(100%, 34rem);
+  min-height: 100svh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--shell);
+  box-shadow: 0 0 4rem rgba(61, 50, 43, 0.14);
+}
+
+.audioToggle {
+  position: fixed;
+  top: max(1rem, env(safe-area-inset-top));
+  right: max(1rem, env(safe-area-inset-right));
+  z-index: 20;
+  min-width: 4.75rem;
+  min-height: 2.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(45, 38, 32, 0.72);
+  box-shadow: 0 1rem 2rem rgba(39, 31, 26, 0.18);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(14px);
+}

@@ -1,0 +1,59 @@
+.location {
+  padding: 3rem 1.15rem;
+  background: #fffdf8;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.location h2 {
+  margin: 0 auto 1.25rem;
+  color: var(--ink);
+  font-family: var(--serif-arm);
+  font-size: clamp(1.55rem, 6vw, 2.05rem);
+  line-height: 1.25;
+  text-align: center;
+}
+
+.details {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0 auto 1.45rem;
+}
+
+.venue {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.14rem;
+  font-weight: 800;
+}
+
+.address,
+.time {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.mapButton {
+  display: inline-grid;
+  place-items: center;
+  min-height: 3.2rem;
+  min-width: 13rem;
+  border: 1px solid rgba(95, 83, 72, 0.18);
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 0.9rem 1.7rem rgba(95, 83, 72, 0.12);
+  font-weight: 800;
+  text-decoration: none;
+}

@@ -1,0 +1,54 @@
+.story {
+  padding: 3rem 1.15rem 2.5rem;
+  background: #fffdf8;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.story h2 {
+  margin: 0 auto 1.35rem;
+  color: var(--ink);
+  font-family: var(--serif-arm);
+  font-size: clamp(1.55rem, 6vw, 2.05rem);
+  line-height: 1.25;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(95, 83, 72, 0.12);
+  border-radius: 0.55rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 1rem 2.1rem rgba(88, 77, 67, 0.08);
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5.1;
+    object-fit: cover;
+    object-position: center;
+    background: var(--accent-pearl);
+  }
+
+  figcaption {
+    padding: 0.9rem 1rem 1.05rem;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    text-align: center;
+  }
+}

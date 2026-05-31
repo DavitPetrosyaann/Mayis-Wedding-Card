@@ -1,0 +1,147 @@
+// .cover {
+//   position: fixed;
+//   inset: 0;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100%;
+//   height: 100vh;
+//   padding: clamp(1.25rem, 5vw, 2rem);
+//   overflow: hidden;
+//   background: #eee7dd;
+// }
+
+.cover {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #eee7dd;
+  margin: 0;
+}
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: contrast(0.98) brightness(1.02);
+}
+
+.cover::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(
+      180deg,
+      rgba(28, 23, 19, 0.08) 0%,
+      rgba(248, 244, 238, 0.52) 56%,
+      rgba(248, 244, 238, 0.98) 100%
+    ),
+    radial-gradient(
+      ellipse at 50% 88%,
+      rgba(255, 255, 255, 0.82),
+      transparent 18rem
+    );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  width: min(90%, 25rem);
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.kicker {
+  margin: 0;
+  color: rgba(47, 42, 38, 0.88);
+  font-family: var(--serif-arm);
+  font-size: clamp(1rem, 4.4vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.content h1 {
+  margin: 0.65rem 0 0.2rem;
+  color: var(--ink);
+  font-family: var(--script);
+  font-size: clamp(3.1rem, 14vw, 5.6rem);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 1rem 2.2rem rgba(80, 72, 65, 0.16);
+}
+
+.date {
+  margin: 0;
+  color: rgba(47, 42, 38, 0.72);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.openButton {
+  width: min(100%, 16rem);
+  min-height: 3.45rem;
+  margin-top: 1.7rem;
+  border: 1px solid rgba(95, 83, 72, 0.18);
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 1.15rem 2.3rem rgba(84, 75, 66, 0.18);
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 800;
+  backdrop-filter: blur(12px);
+}
+
+@media (max-width: 640px) {
+  .cover {
+    padding: 1rem 0.75rem 1.2rem;
+  }
+
+  .content {
+    bottom: 0.9rem;
+    width: min(96%, 24rem);
+    padding: 0 0.9rem;
+  }
+
+  .kicker {
+    font-size: 0.95rem;
+    white-space: normal;
+  }
+
+  .content h1 {
+    font-size: clamp(2.4rem, 10vw, 4rem);
+    white-space: normal;
+  }
+
+  .date {
+    font-size: 0.78rem;
+    letter-spacing: 0.11em;
+  }
+
+  .openButton {
+    min-height: 3rem;
+    margin-top: 1.25rem;
+    font-size: 1rem;
+  }
+}
