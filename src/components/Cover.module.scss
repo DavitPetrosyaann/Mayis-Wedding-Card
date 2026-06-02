@@ -60,6 +60,7 @@
   z-index: 1;
   display: grid;
   justify-items: center;
+  place-items: center;
   width: min(90%, 25rem);
   padding: 0 1rem;
   text-align: center;
@@ -119,7 +120,6 @@
   }
 
   .content {
-    bottom: 0.9rem;
     width: min(96%, 24rem);
     padding: 0 0.9rem;
   }
