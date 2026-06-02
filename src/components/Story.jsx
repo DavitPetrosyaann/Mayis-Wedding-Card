@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "../lib/motion-fallback";
 import storyOne from "../assets/images/IMG_3318.PNG";
 import storyTwo from "../assets/images/IMG_3215.JPG";
 import storyThree from "../assets/images/IMG_3534.JPG";
@@ -30,7 +30,7 @@ const cardVariants = {
     transition: {
       duration: 0.6,
       delay: index * 0.14,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   }),
 };
