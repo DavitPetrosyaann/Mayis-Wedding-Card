@@ -1,8 +1,11 @@
-import coverImage from "./assets/images/dzerqer.JPG";
-import heroImage from "./assets/images/IMG_8115.PNG";
-import storyImageOne from "./assets/images/IMG_3318.PNG";
-import storyImageTwo from "./assets/images/IMG_3215.JPG";
 import musicFile from "./assets/music.mp3";
+
+const STORAGE_BASE = import.meta.env.VITE_FIREBASE_STORAGE_BASE_URL || "";
+
+function resolveImage(fileName) {
+  if (STORAGE_BASE) return `${STORAGE_BASE.replace(/\/$/, "")}/${fileName}`;
+  return new URL(`./assets/images/${fileName}`, import.meta.url).toString();
+}
 
 export const eventDetails = {
   couple: "Մայիս և Գոհար",
@@ -28,20 +31,20 @@ export const eventDetails = {
     "https://www.google.com/maps/search/?api=1&query=Nazarbekyan%2025%2F5",
   audioSrc: musicFile,
   images: {
-    cover: coverImage,
+    cover: resolveImage("dzerqer.JPG"),
     hero: {
-      src: heroImage,
+      src: resolveImage("IMG_8115.PNG"),
       alt: "Մայիս և Գոհար",
       position: "center top",
     },
     story: [
       {
-        src: storyImageOne,
+        src: resolveImage("IMG_3318.PNG"),
         alt: "Մայիս և Գոհար՝ միասին",
         position: "center center",
       },
       {
-        src: storyImageTwo,
+        src: resolveImage("IMG_3215.JPG"),
         alt: "Մայիս և Գոհար՝ հայացքներ",
         position: "center center",
       },

@@ -12,9 +12,16 @@ function escapeHtmlAttribute(value) {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
+  // If a direct preview image URL isn't provided, but a Firebase storage base URL
+  // is set, use the project's first image (cover) as the preview image.
+  let publicPreviewImageUrl = env.VITE_PUBLIC_PREVIEW_IMAGE_URL;
+  if (!publicPreviewImageUrl && env.VITE_FIREBASE_STORAGE_BASE_URL) {
+    publicPreviewImageUrl = `${env.VITE_FIREBASE_STORAGE_BASE_URL.replace(/\/$/, '')}/dzerqer.JPG`;
+  }
+
   const previewMeta = buildPreviewMeta({
     publicProjectUrl: env.VITE_PUBLIC_PROJECT_URL,
-    publicPreviewImageUrl: env.VITE_PUBLIC_PREVIEW_IMAGE_URL,
+    publicPreviewImageUrl: publicPreviewImageUrl,
   });
 
   const replacements = {
