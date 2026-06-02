@@ -1,17 +1,28 @@
 import React from "react";
 
-// Minimal fallback API for `framer-motion` used in this project.
-// Provides `motion.figure` compatible component props used in `Story.jsx`.
+// Lightweight fallback that returns simple React elements for any tag used as
+// `motion.tag` (e.g. `motion.section`, `motion.figure`, `motion.a`). This
+// lets the app run without the real `framer-motion` during local dev.
 
-export const motion = {
-  figure: React.forwardRef(function MotionFigure(props, ref) {
-    const { children, className, style, ...rest } = props;
-    return (
-      <figure ref={ref} className={className} style={style} {...rest}>
-        {children}
-      </figure>
+function createMotionTag(tag) {
+  return React.forwardRef(function MotionTag(props, ref) {
+    const { children, style, className, ...rest } = props;
+    return React.createElement(
+      tag,
+      { ref, style, className, ...rest },
+      children,
     );
-  }),
-};
+  });
+}
 
+const motion = new Proxy(
+  {},
+  {
+    get(_, prop) {
+      return createMotionTag(prop);
+    },
+  },
+);
+
+export { motion };
 export default motion;

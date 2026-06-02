@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { eventDetails } from '../event.js';
-import SectionShell from './SectionShell.jsx';
-import styles from './LocationSection.module.scss';
+import { motion } from "../lib/motion-fallback";
+import { eventDetails } from "../event.js";
+import SectionShell from "./SectionShell.jsx";
+import styles from "./LocationSection.module.scss";
 
 function LocationSection() {
   return (
