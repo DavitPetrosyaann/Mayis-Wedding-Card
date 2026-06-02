@@ -1,22 +1,22 @@
-import { defineConfig, loadEnv } from 'vite';
-import react from '@vitejs/plugin-react';
-import { buildPreviewMeta } from './src/previewMeta.constants.js';
+import { defineConfig, loadEnv } from "vite";
+import react from "@vitejs/plugin-react";
+import { buildPreviewMeta } from "./src/previewMeta.constants.js";
 
 function escapeHtmlAttribute(value) {
   return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('"', '&quot;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;');
+    .replaceAll("&", "&amp;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
 }
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '');
+  const env = loadEnv(mode, process.cwd(), "");
   // If a direct preview image URL isn't provided, but a Firebase storage base URL
   // is set, use the project's first image (cover) as the preview image.
   let publicPreviewImageUrl = env.VITE_PUBLIC_PREVIEW_IMAGE_URL;
   if (!publicPreviewImageUrl && env.VITE_FIREBASE_STORAGE_BASE_URL) {
-    publicPreviewImageUrl = `${env.VITE_FIREBASE_STORAGE_BASE_URL.replace(/\/$/, '')}/dzerqer.JPG`;
+    publicPreviewImageUrl = `${env.VITE_FIREBASE_STORAGE_BASE_URL.replace(/\/$/, "")}/dzerqer.JPG`;
   }
 
   const previewMeta = buildPreviewMeta({
@@ -35,12 +35,26 @@ export default defineConfig(({ mode }) => {
   };
 
   return {
-    assetsInclude: ['**/*.JPG', '**/*.JPEG', '**/*.PNG', '**/*.WEBP', '**/*.AVIF'],
-    cacheDir: '.vite-cache',
+    assetsInclude: [
+      "**/*.JPG",
+      "**/*.JPEG",
+      "**/*.PNG",
+      "**/*.WEBP",
+      "**/*.AVIF",
+    ],
+    cacheDir: ".vite-cache",
+    optimizeDeps: {
+      include: ["framer-motion"],
+    },
+    resolve: {
+      alias: {
+        "framer-motion": "framer-motion/dist/framer-motion",
+      },
+    },
     plugins: [
       react(),
       {
-        name: 'preview-meta-html',
+        name: "preview-meta-html",
         transformIndexHtml(html) {
           return Object.entries(replacements).reduce(
             (result, [key, value]) =>
