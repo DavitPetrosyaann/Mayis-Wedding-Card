@@ -48,7 +48,8 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        "framer-motion": "framer-motion/dist/framer-motion",
+        "framer-motion": "framer-motion/dist/es/index.mjs",
+        "framer-motion/dist/framer-motion": "framer-motion/dist/es/index.mjs",
       },
     },
     plugins: [
