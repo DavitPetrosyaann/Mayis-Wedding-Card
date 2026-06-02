@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="preZento">
+  <rect width="64" height="64" rx="16" fill="#faf9f6"/>
+  <circle cx="32" cy="32" r="23" fill="#d6c4b0"/>
+  <path fill="#2f2a26" d="M18 45V18h15.2c6.9 0 11.3 3.8 11.3 9.8 0 6.1-4.4 9.9-11.3 9.9h-8.3V45H18Zm6.9-12.9h7.8c3.1 0 4.9-1.6 4.9-4.3 0-2.6-1.8-4.2-4.9-4.2h-7.8v8.5Z"/>
+</svg>
